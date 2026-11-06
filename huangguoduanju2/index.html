@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄果短剧官方入口-黄果短剧在线入口_黄果短剧官方平台入口与热门短剧</title>
+<meta name="description" content="黄果短剧官方入口页面，汇集黄果短剧官方平台入口说明、热门短剧栏目、观看方式与常见问题，帮助访问者快速找到黄果短剧官方入口并了解平台内容方向。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f4a300'/%3E%3Cpath d='M22 18h20a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H30l-8 8v-8a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z' fill='%23332000'/%3E%3Cpath d='M30 26l10 5-10 5z' fill='%23f4a300'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#2a1c05;
+    --ink-soft:#5c4a2a;
+    --mango:#f4a300;
+    --mango-deep:#d98600;
+    --mango-pale:#fff6e2;
+    --leaf:#3f7d4f;
+    --leaf-pale:#eef6ef;
+    --paper:#fffdf8;
+    --line:#ecdcc0;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--mango-deep);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,253,248,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;gap:18px;
+    min-height:66px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;}
+  .brand .mark{width:34px;height:34px;flex:none;}
+  .brand span.bname{font-size:1.06rem;color:var(--ink);}
+  nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+  nav.main a{
+    display:inline-block;padding:6px 11px;border-radius:999px;
+    font-size:.92rem;color:var(--ink-soft);
+  }
+  nav.main a:hover{background:var(--mango-pale);color:var(--ink);text-decoration:none;}
+  nav.main a.cta{background:var(--mango);color:#332000;font-weight:700;}
+  nav.main a.cta:hover{background:var(--mango-deep);color:#fff;}
+
+  /* 首屏 */
+  .hero{
+    background:
+      radial-gradient(circle at 88% 12%, rgba(244,163,0,.20), transparent 46%),
+      radial-gradient(circle at 8% 84%, rgba(63,125,79,.13), transparent 44%),
+      var(--mango-pale);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:40px;
+    align-items:center;padding:52px 0 56px;
+  }
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.82rem;font-weight:700;letter-spacing:1px;
+    color:var(--leaf);background:var(--leaf-pale);
+    border:1px solid #d3e6d6;border-radius:999px;padding:4px 12px;
+  }
+  h1{
+    font-size:clamp(1.72rem,3.6vw,2.6rem);
+    line-height:1.28;margin:16px 0 14px;letter-spacing:.5px;
+  }
+  .hero p.lead{
+    font-size:1.02rem;color:var(--ink-soft);margin:0 0 24px;max-width:38em;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:999px;font-weight:700;font-size:.98rem;
+    border:1px solid transparent;transition:.18s;
+  }
+  .btn-primary{background:var(--mango);color:#332000;box-shadow:0 6px 16px rgba(244,163,0,.32);}
+  .btn-primary:hover{background:var(--mango-deep);color:#fff;text-decoration:none;}
+  .btn-ghost{background:#fff;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--mango);text-decoration:none;}
+  .hero-note{font-size:.85rem;color:var(--ink-soft);margin-top:16px;}
+
+  .hero-art{
+    background:#fff;border:1px solid var(--line);border-radius:22px;
+    padding:20px;box-shadow:0 14px 34px rgba(120,80,0,.09);
+  }
+  .hero-art .art-title{font-size:.86rem;font-weight:700;color:var(--ink-soft);margin-bottom:12px;}
+  .tile-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .tile{
+    border-radius:10px;overflow:hidden;border:1px solid var(--line);
+    background:var(--mango-pale);
+  }
+  .tile .cap{font-size:.72rem;text-align:center;padding:5px 2px;color:var(--ink-soft);}
+
+  /* 通用分区 */
+  section{padding:54px 0;}
+  section.alt{background:#fffdf8;}
+  .sec-head{max-width:44em;margin-bottom:28px;}
+  .sec-head h2{
+    font-size:clamp(1.24rem,2.3vw,1.6rem);
+    margin:0 0 10px;line-height:1.4;
+  }
+  .sec-head p{margin:0;color:var(--ink-soft);font-size:.95rem;}
+  .eyebrow{
+    font-size:.78rem;font-weight:800;letter-spacing:2px;
+    color:var(--mango-deep);text-transform:uppercase;margin-bottom:6px;
+  }
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 20px 22px;
+  }
+  .card h3{font-size:1.02rem;margin:0 0 8px;line-height:1.45;}
+  .card p{margin:0;font-size:.92rem;color:var(--ink-soft);}
+  .card .tag{
+    display:inline-block;font-size:.72rem;font-weight:700;
+    background:var(--leaf-pale);color:var(--leaf);
+    border-radius:6px;padding:2px 8px;margin-bottom:10px;
+  }
+  .card .tag.warm{background:var(--mango-pale);color:var(--mango-deep);}
+
+  /* 短剧列表 */
+  .drama-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .drama{
+    display:flex;gap:14px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px;
+  }
+  .drama .thumb{
+    width:66px;height:66px;flex:none;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--mango-pale);border:1px solid var(--line);
+  }
+  .drama h3{font-size:.97rem;margin:0 0 4px;}
+  .drama p{font-size:.85rem;color:var(--ink-soft);margin:0;}
+  .drama .meta{font-size:.76rem;color:var(--mango-deep);font-weight:700;margin-top:6px;display:block;}
+
+  /* 步骤 */
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 20px;position:relative;
+  }
+  .step::before{
+    counter-increment:s;content:counter(s);
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;
+    background:var(--mango);color:#332000;font-weight:800;font-size:.9rem;
+    margin-bottom:12px;
+  }
+  .step h3{font-size:.98rem;margin:0 0 6px;}
+  .step p{margin:0;font-size:.9rem;color:var(--ink-soft);}
+
+  /* 问答 */
+  .qa{border-top:1px solid var(--line);}
+  .qa details{
+    border-bottom:1px solid var(--line);
+    padding:16px 0;
+  }
+  .qa summary{
+    cursor:pointer;font-weight:700;font-size:.98rem;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;
+  }
+  .qa summary::-webkit-details-marker{display:none;}
+  .qa summary::after{content:"+";color:var(--mango-deep);font-weight:800;}
+  .qa details[open] summary::after{content:"–";}
+  .qa p{margin:10px 0 0;font-size:.92rem;color:var(--ink-soft);}
+
+  /* 下载条 */
+  .download-bar{
+    background:linear-gradient(120deg,#fff3d6,#fffdf8);
+    border:1px solid var(--line);border-radius:18px;
+    padding:26px 24px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  }
+  .download-bar h2{font-size:1.16rem;margin:0 0 6px;}
+  .download-bar p{margin:0;font-size:.9rem;color:var(--ink-soft);max-width:34em;}
+  .btn-disabled{
+    background:#e4d9c6;color:#7a6a52;cursor:not-allowed;
+    pointer-events:none;text-decoration:none;
+  }
+
+  footer.site{
+    border-top:1px solid var(--line);
+    background:#fffaf0;
+    padding:32px 0 26px;font-size:.86rem;color:var(--ink-soft);
+  }
+  .foot-top{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);}
+  .foot-brand .mark{width:26px;height:26px;}
+  .foot-links{display:flex;gap:16px;flex-wrap:wrap;}
+  .foot-links a{color:var(--ink-soft);}
+  .foot-bottom{border-top:1px dashed var(--line);padding-top:14px;line-height:1.8;}
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;padding:36px 0 40px;gap:26px;}
+    .grid-3,.steps{grid-template-columns:1fr;}
+    .grid-2,.drama-list{grid-template-columns:1fr;}
+    nav.main a{padding:5px 9px;font-size:.86rem;}
+    section{padding:40px 0;}
+    .head-inner{min-height:auto;padding:10px 0;}
+    nav.main{margin-left:0;width:100%;justify-content:flex-start;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-label="黄果短剧官方入口标志">
+        <rect width="64" height="64" rx="16" fill="#f4a300"/>
+        <path d="M22 18h20a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H30l-8 8v-8a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z" fill="#332000"/>
+        <path d="M30 26l10 5-10 5z" fill="#f4a300"/>
+      </svg>
+      <span class="bname">黄果短剧官方入口</span>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <a href="#entry">官方入口</a>
+      <a href="#hot">热门短剧</a>
+      <a href="#howto">观看方式</a>
+      <a href="#qa">常见问题</a>
+      <a class="cta" href="#entry">立即进入</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="kicker">短剧观看 · 入口导航</span>
+        <h1>黄果短剧官方入口</h1>
+        <p class="lead">这里是为寻找黄果短剧官方入口的访问者准备的主题首页。页面集中说明黄果短剧官方入口的用途、进入方式与平台热门短剧方向，让第一次接触黄果短剧官方入口的用户也能快速上手，不必在多个页面之间来回查找。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">前往官方入口</a>
+          <a class="btn btn-ghost" href="#hot">看看热门短剧</a>
+        </div>
+        <p class="hero-note">入口信息以页面说明为准；如遇跳转异常，可先阅读下方的观看方式与常见问题。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-title">平台内容方向一览</div>
+        <div class="tile-row">
+          <div class="tile">
+            <svg viewBox="0 0 100 120"><rect width="100" height="120" fill="#ffe9bd"/><circle cx="50" cy="46" r="20" fill="#f4a300"/><rect x="24" y="76" width="52" height="8" rx="4" fill="#d98600"/><rect x="32" y="92" width="36" height="7" rx="3.5" fill="#e8c98f"/></svg>
+            <div class="cap">都市情感</div>
+          </div>
+          <div class="tile">
+            <svg viewBox="0 0 100 120"><rect width="100" height="120" fill="#e8f2e9"/><path d="M50 24l9 19 21 3-15 15 4 21-19-10-19 10 4-21-15-15 21-3z" fill="#3f7d4f"/><rect x="26" y="96" width="48" height="7" rx="3.5" fill="#a9cdb1"/></svg>
+            <div class="cap">古装传奇</div>
+          </div>
+          <div class="tile">
+            <svg viewBox="0 0 100 120"><rect width="100" height="120" fill="#fff0d4"/><rect x="20" y="30" width="60" height="40" rx="8" fill="#f4a300"/><path d="M42 42l18 8-18 8z" fill="#fff"/><rect x="28" y="84" width="44" height="7" rx="3.5" fill="#e0b160"/></svg>
+            <div class="cap">悬疑反转</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 官方入口 -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Entry</div>
+        <h2>黄果短剧官方入口说明</h2>
+        <p>访问者最常提出的问题是“黄果短剧官方入口在哪里、从哪进”。本区把入口的性质与判断要点讲清楚，帮助你把黄果短剧官方入口和普通转载页面区分开。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="tag warm">定位</span>
+          <h3>入口是官方平台的起始页</h3>
+          <p>黄果短剧官方入口承担的是引导职责：进入后可以看到平台的内容分类与剧集列表，再按兴趣选择观看。它不是某一部剧的播放页，而是通往全部内容的起点。</p>
+        </article>
+        <article class="card">
+          <span class="tag">识别</span>
+          <h3>从页面信息判断是否为官方</h3>
+          <p>官方入口通常有统一的品牌标识、完整的功能导航和一致的页面风格。若页面只有零散广告、缺少平台介绍，建议先回到黄果短剧官方入口重新确认来源。</p>
+        </article>
+        <article class="card">
+          <span class="tag">使用</span>
+          <h3>入口适合谁使用</h3>
+          <p>新访客可用它快速了解平台内容结构；老用户可用它直达剧集列表。无论哪种情况，黄果短剧官方入口都是最直接的访问路径。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门短剧 -->
+  <section id="hot" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Content</div>
+        <h2>从官方入口进入后能看到的短剧类型</h2>
+        <p>短剧平台的内容通常以题材划分栏目。下列类型是常见的内容方向，具体剧集与更新情况以黄果短剧官方入口内的实际展示为准。</p>
+      </div>
+      <div class="drama-list">
+        <article class="drama">
+          <div class="thumb" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="#ffe9bd"/><circle cx="24" cy="19" r="7" fill="#f4a300"/><path d="M12 38c2-7 8-10 12-10s10 3 12 10z" fill="#d98600"/></svg>
+          </div>
+          <div>
+            <h3>都市情感类</h3>
+            <p>贴近日常生活的故事线，节奏轻快，适合碎片时间连续观看，是入口页中曝光较多的类型。</p>
+            <span class="meta">适合通勤与午休时段</span>
+          </div>
+        </article>
+        <article class="drama">
+          <div class="thumb" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="#e8f2e9"/><path d="M24 10l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z" fill="#3f7d4f"/></svg>
+          </div>
+          <div>
+            <h3>古装传奇类</h3>
+            <p>以历史背景或架空设定展开，服饰与场景是看点之一，单集篇幅短、剧情推进明显。</p>
+            <span class="meta">适合喜欢完整故事的观众</span>
+          </div>
+        </article>
+        <article class="drama">
+          <div class="thumb" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="#fff0d4"/><rect x="13" y="17" width="22" height="15" rx="4" fill="#f4a300"/><path d="M21 21l7 3.5-7 3.5z" fill="#fff"/></svg>
+          </div>
+          <div>
+            <h3>悬疑反转类</h3>
+            <p>以情节转折为核心卖点，结尾常留悬念。观看时建议按顺序从第一集开始，避免跳过铺垫。</p>
+            <span class="meta">适合专注观看</span>
+          </div>
+        </article>
+        <article class="drama">
+          <div class="thumb" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="22" fill="#ffe9bd"/><rect x="14" y="14" width="20" height="20" rx="6" fill="#d98600"/><circle cx="24" cy="24" r="5" fill="#fff6e2"/></svg>
+          </div>
+          <div>
+            <h3>轻喜剧类</h3>
+            <p>以生活化笑点推进剧情，单集信息量不大，适合放松时打开黄果短剧官方入口随手点开一集。</p>
+            <span class="meta">适合休闲时段</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看方式 -->
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">How to</div>
+        <h2>通过黄果短剧官方入口观看的三个步骤</h2>
+        <p>整个流程并不复杂，关键是把入口找对、把剧集选准、把播放环境准备好。以下顺序适合初次使用黄果短剧官方入口的访客。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>打开官方入口</h3>
+          <p>先进入黄果短剧官方入口页面，确认品牌标识与导航完整，再开始浏览内容列表。</p>
+        </div>
+        <div class="step">
+          <h3>按题材筛选剧集</h3>
+          <p>在入口页内按都市、古装、悬疑等分类浏览，点开感兴趣的作品查看简介与集数信息。</p>
+        </div>
+        <div class="step">
+          <h3>保持稳定网络观看</h3>
+          <p>播放前确认网络通畅，按集序观看更利于理解剧情。若页面加载缓慢，可稍后重试或刷新黄果短剧官方入口。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="download-bar">
+        <div>
+          <h2>获取客户端，从官方入口进入更便捷</h2>
+          <p>客户端版本可在桌面与移动设备上直接打开剧集列表，减少每次查找黄果短剧官方入口的步骤。安装包与版本信息将在此处提供，当前尚未上线，可先通过网页版入口访问。</p>
+        </div>
+        <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="qa">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>关于黄果短剧官方入口的常见问题</h2>
+        <p>以下问题来自访问者对入口使用的普遍疑问，答案围绕实际访问场景展开。</p>
+      </div>
+      <div class="qa">
+        <details open>
+          <summary>黄果短剧官方入口打不开怎么办？</summary>
+          <p>先检查网络连接与浏览器版本，再尝试刷新页面。若多个设备均无法打开，可能是访问高峰造成的临时拥堵，建议稍后重试，并从本页提供的入口链接重新进入。</p>
+        </details>
+        <details>
+          <summary>入口页能看到全部剧集吗？</summary>
+          <p>黄果短剧官方入口提供的是内容总览与分类导航，具体剧集数量与更新节奏由平台安排，入口页展示的是当前可浏览的内容范围。</p>
+        </details>
+        <details>
+          <summary>手机和电脑访问入口有区别吗？</summary>
+          <p>两种设备的访问路径一致，页面会自动适配屏幕宽度。手机上建议横竖屏切换试看，以获得更合适的画面比例。</p>
+        </details>
+        <details>
+          <summary>如何确认自己进入的是官方入口？</summary>
+          <p>留意页面是否有统一的品牌名称、完整的栏目导航和清晰的平台介绍。缺少这些要素的页面，建议不要在其上填写任何个人信息。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="#f4a300"/>
+          <path d="M22 18h20a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H30l-8 8v-8a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z" fill="#332000"/>
+          <path d="M30 26l10 5-10 5z" fill="#f4a300"/>
+        </svg>
+        <span>黄果短剧官方入口</span>
+      </div>
+      <div class="foot-links">
+        <a href="#entry">官方入口</a>
+        <a href="#hot">热门短剧</a>
+        <a href="#howto">观看方式</a>
+        <a href="#qa">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>本页为黄果短剧官方入口的主题导航页面，汇集入口说明、内容分类与使用问答。剧集名称、类型与更新情况以黄果短剧官方入口内的实际展示为准。访问时请通过正规渠道进入，避免在非官方页面提交账号信息。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
